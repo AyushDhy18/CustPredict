@@ -1,3 +1,4 @@
+
 # Python
 __pycache__/
 *.py[cod]
@@ -20,13 +21,15 @@ dist/
 .env
 .env.*
 
-# Data files
-data/raw/*
-data/processed/*
+# Raw datasets - do not upload
+data/raw/
 
-# Keep directory structure
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# Ignore processed data except required ML outputs
+data/processed/*
+!data/processed/member1/
+data/processed/member1/*
+!data/processed/member1/customer_segmentation_results.csv
+!data/processed/member1/cluster_analysis.csv
 
 # IDE
 .vscode/
